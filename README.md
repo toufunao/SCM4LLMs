@@ -7,12 +7,13 @@ Our SCM system is composed of three key modules: the language model agent, the m
 <img src="misc/workflow.png" align="middle" width="95%">
 
 # 🔥 Updates
-- [**2023-4-26**] We released our [paper](https://arxiv.org/abs/2304.xxx), [codes](https://github.com/wbbeyourself/SCM4LLMs). Check it out!
+- [**2023-4-26**] We released our first version [paper](https://arxiv.org/abs/2304.xxx), [codes](https://github.com/wbbeyourself/SCM4LLMs). Check it out!
 
 
 # 🏴󠁶󠁵󠁭󠁡󠁰󠁿 Overview
 
 Our SCM system can be integrated with any LLMs to enable them to process ultra-long texts without any modification or fine-tuning. 
+
 Experimental results show that our SCM system enables LLMs, which are not optimized for multi-turn dialogue, to achieve multi-turn dialogue capabilities that are comparable to ChatGPT, and to outperform ChatGPT in scenarios involving ultra-long document summarization or long-term conversations.
 
 
@@ -47,9 +48,9 @@ pip install -r requirements.txt
 Default agent model use `text-davinci-003`.
 
 You can specify model by `--model_name`, current support model list: 
-- text-davinci-003
-- gpt-3.5-turbo
-- other in progress: BLOOM, Alpaca, LLaMA, ChatGLM
+- `text-davinci-003`
+- `gpt-3.5-turbo`
+- other LLMs, which can understand instructions, in progress: `Alpaca`, `Vicuna`, `ChatGLM`, etc.
 
 Functional command during dialogue, these operations will be silently done, you can see them in terminal log output.:
 - `reset` or `清空`: clear dialogue history.
@@ -74,6 +75,7 @@ python summary-ui-demo.py
 Additional functional command for summarization is `final summary` to get the final summary.
 
 ## Limitations & Risks
+
 > A lack of appropriate datasets for evaluating the handling of extremely lengthy texts has resulted in our model being validated solely through manual verification. This method, however, is inadequate for evaluating different scenarios comprehensively and objectively. Therefore, we aim to construct a specific test set that incorporates various key indicators essential for processing long texts in diverse settings.This test set will be accompanied by a manual evaluation standard to enable a more equitable comparison with relevant methods. Moreover, we will assess the efficacy of our system on more open-source models that possess single-turn instruction comprehension capability.
 
 
