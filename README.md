@@ -1,13 +1,13 @@
 # Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System
 
 
-This is the official repository for the paper ["Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System"](https://arxiv.org/abs/2304.xxx). In this paper, we introduce the Self-Controlled Memory (SCM) system to unleash infinite-length input capacity for large-scale language models.
+This is the official repository for the paper ["Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System"](https://arxiv.org/abs/2304.13343). In this paper, we introduce the Self-Controlled Memory (SCM) system to unleash infinite-length input capacity for large-scale language models.
 Our SCM system is composed of three key modules: the language model agent, the memory stream, and the memory controller. 
 
 <img src="misc/workflow.png" align="middle" width="95%">
 
 # 🔥 Updates
-- [**2023-4-26**] We released our first version [paper](https://arxiv.org/abs/2304.xxx), [codes](https://github.com/wbbeyourself/SCM4LLMs). Check it out!
+- [**2023-4-26**] We released our first version [paper](https://arxiv.org/abs/2304.13343), [codes](https://github.com/wbbeyourself/SCM4LLMs). Check it out!
 
 
 # 🏴󠁶󠁵󠁭󠁡󠁰󠁿 Overview
@@ -30,7 +30,6 @@ The key requirements are as below:
 - python 3.8+
 - openai 0.27.0+
 - gradio 3.27.0+
-<!-- - transformers 4.26.1+ -->
 
 Use conda to create environment.
 ```shell
@@ -74,6 +73,13 @@ python summary-ui-demo.py
 
 Additional functional command for summarization is `final summary` to get the final summary.
 
+## TODO
+
+- [ ] Evaluation test set
+- [ ] Comparison with other models and methods
+
+
+
 ## Limitations & Risks
 
 > A lack of appropriate datasets for evaluating the handling of extremely lengthy texts has resulted in our model being validated solely through manual verification. This method, however, is inadequate for evaluating different scenarios comprehensively and objectively. Therefore, we aim to construct a specific test set that incorporates various key indicators essential for processing long texts in diverse settings.This test set will be accompanied by a manual evaluation standard to enable a more equitable comparison with relevant methods. Moreover, we will assess the efficacy of our system on more open-source models that possess single-turn instruction comprehension capability.
@@ -85,11 +91,11 @@ Additional functional command for summarization is `final summary` to get the fi
 # 💬 Citation
 If you find our work is helpful, please cite as:
 ```
-@article{xxx,
-  title={xxx},
-  author={xxx},
-  eprint={2304.xxx},
-  year={2023}
+@article{liang2023unleashing,
+      title={Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System}, 
+      author={Xinnian Liang and Bing Wang and Hui Huang and Shuangzhi Wu and Peihao Wu and Lu Lu and Zejun Ma and Zhoujun Li},
+      year={2023},
+      eprint={2304.13343}
 }
 ```
 
